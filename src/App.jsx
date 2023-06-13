@@ -4,7 +4,7 @@ import { useState } from "react";
 // import { useEffect } from "react";
 
 export default function App() {
-  const [data] = useState([
+  const data = [
     {
       id: "879144f0-2866-4f62-9e79-87db0a10ef86",
       name: "Hong Kong Women vs India A Women, 4th Match, Group A",
@@ -634,7 +634,7 @@ export default function App() {
       matchStarted: true,
       matchEnded: false,
     },
-  ]);
+  ];
 
   // const fetch1 = () => {
   //   fetch(
@@ -642,22 +642,11 @@ export default function App() {
   //   )
   //     .then((res) => res.json())
   //     .then((res) => setData([res]));
-  //   // console.log(data);
   // };
-
-  // fetch1();
 
   // useEffect(() => {
   //   fetch1();
-  // }, []);
-
-  // useEffect(() => {
-  //   console.log(data);
-  // }, []);
-
-  // useEffect(() => {
-  //   fetch1;
-  // });
+  // }, data);
 
   return (
     <div className="maindiv">
@@ -682,6 +671,7 @@ export default function App() {
               <p>DATE: {`(${data.date})`}</p>
             </div>
             <div className="three">
+              <img width="54px" src={data.teamInfo[0].img} alt="hi" srcset="" />
               <p>
                 <u> {data.teams[0]} </u>{" "}
               </p>
@@ -689,6 +679,7 @@ export default function App() {
               <p>
                 <u> {data.teams[1]} </u>{" "}
               </p>
+              <img width="54px" src={data.teamInfo[0].img} alt="hi" srcset="" />
             </div>
             <div className="four">
               <p>RESULT: {data.status}</p>
